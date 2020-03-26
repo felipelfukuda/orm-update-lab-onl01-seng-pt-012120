@@ -57,9 +57,12 @@ class Student
   end
 
   def self.new_from_db(row)
+  #  id = row[0]
+  #  name = row[1]
+  #  grade = row[2]
+  #  new_student = self.new(id, name, grade)
     id, name, grade = row[0], row[1], row[2] #assigns id, = row[0]
     student = self.new(id, name, grade)
-    binding.pry
   end
 
   def self.find_by_name(name)
