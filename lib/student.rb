@@ -1,4 +1,5 @@
 require_relative "../config/environment.rb"
+require "pry"
 
 class Student
 
@@ -56,8 +57,9 @@ class Student
   end
 
   def self.new_from_db(row)
-    id, name, grade = row[0], row[1], row[2]
+    id, name, grade = row[0], row[1], row[2] #assigns id, = row[0]
     student = self.new(id, name, grade)
+    binding.pry
   end
 
   def self.find_by_name(name)
